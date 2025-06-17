@@ -1,5 +1,7 @@
+# 0.1.1
 
-F90=gcc -O3 -fpic
+CC=gcc
+F90=$(CC) -O3 -fpic
 PATHLIB=../OneFit-Engine/lib
 
 all: lib
