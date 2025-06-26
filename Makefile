@@ -1,6 +1,6 @@
-# 0.1.1
+# 0.1.2
 
-CC=gcc
+CC=gfortran
 F90=$(CC) -O3 -fpic
 PATHLIB=../OneFit-Engine/lib
 
