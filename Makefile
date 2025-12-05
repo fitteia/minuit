@@ -15,9 +15,7 @@ dd%.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
 
 %.o: %.F
-	gfortran -O3 -c $< -o $@
-
-
+	$(F90) -c $< -o $@
 
 lib: $(OBJS) 
 #	$(F90) -c *.F
