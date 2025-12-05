@@ -6,7 +6,7 @@ PATHLIB=../OneFit-Engine/lib
 
 all: lib
 
-FSRCS := $(wildcard *.f)
+FSRCS := $(wildcard *.F)
 
 # turn them into object names
 OBJS  := $(CSRCS:.c=.o) $(FSRCS:.f=.o)
