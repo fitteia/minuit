@@ -15,7 +15,7 @@ dd%.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
 
 %.o: %.F
-	gfortran -c $< -o $@
+	gfortran -O3 -c $< -o $@
 
 
 
