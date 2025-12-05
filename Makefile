@@ -9,7 +9,7 @@ all: lib
 FSRCS := $(wildcard *.F)
 
 # turn them into object names
-OBJS  := $(CSRCS:.c=.o) $(FSRCS:.f=.o)
+OBJS  := $(CSRCS:.c=.o) $(FSRCS:.F=.o)
 
 dd%.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
