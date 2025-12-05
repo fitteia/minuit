@@ -14,7 +14,7 @@ OBJS  := $(CSRCS:.c=.o) $(FSRCS:.F=.o)
 dd%.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
 
-%.o: %.f
+%.o: %.F
 	gfortran -O3 -c $< -o $@
 
 
