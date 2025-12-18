@@ -1,7 +1,7 @@
-# 0.1.3
+# 0.1.5
 
 CC=gfortran
-F90=$(CC) -O3 -fpic
+F90=$(CC) -O3 -fpic -funroll-loops -ffast-math  -std=legacy --fixed-line-length-none -fd-lines-as-comments -fbackslash
 PATHLIB=../OneFit-Engine/lib
 
 all: lib
