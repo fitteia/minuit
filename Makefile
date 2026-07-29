@@ -1,7 +1,7 @@
-# 0.1.6
+# 0.1.7
 
 CC=gfortran
-F90=$(CC) -O3 -fpic -std=legacy
+F90=$(CC) -O3 -fpic -std=legacy -Wno-deprecated
 PATHLIB=../OneFit-Engine/lib
 
 all: lib
