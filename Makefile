@@ -1,8 +1,9 @@
 # 0.1.7
 
+ROOT=../OneFit-Engine
 CC=gfortran
 F90=$(CC) -O3 -fpic -std=legacy -Wno-surprising
-PATHLIB=../OneFit-Engine/lib
+PATHLIB=$(ROOT)/lib
 
 all: lib
 
