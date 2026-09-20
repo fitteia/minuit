@@ -18,7 +18,7 @@
 *
 * d506cm.inc
 *
-      PARAMETER (MNE=100 , MNI=50)
+      PARAMETER (MNE=500 , MNI=250)
       PARAMETER (MNIHL=MNI*(MNI+1)/2)
       CHARACTER*10 CPNAM
       COMMON
