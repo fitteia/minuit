@@ -62,7 +62,7 @@ as a sibling checkout. OneFit-Engine's `INSTALL` script:
 1. Clones this repo to `../minuit` relative to the OneFit-Engine checkout (`git clone
    https://github.com/fitteia/minuit.git`) if not already present, and otherwise `git pull`s it.
 2. Rewrites the `PARAMETER (MNE=..., MNI=...)` line in `minuit/d506cm.inc` to match its own
-   `--minuit=N` install option (max number of fit parameters, default `250`), so `MNE=2*N` and
+   `--minuit=N` install option (max number of fit parameters, default `1000`), so `MNE=2*N` and
    `MNI=N`.
 3. Runs `make install PATHLIB=<OneFit-Engine>/lib && make clean` in this repo.
 4. `Build.rakumod` in OneFit-Engine lists `lib/libminuit.a` as a build artifact/dependency.
