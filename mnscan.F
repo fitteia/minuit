@@ -108,6 +108,12 @@ C         finished with scan of parameter IPAR
       U(IPAR) = UBEST
       CALL MNEXIN(X)
       IF (ISW(5) .GE. 1)  THEN
+C         the exact values first: MNPLOT turns XPT/YPT into grid positions
+C         (point 1 is the best value, point 2 the same marked X, then the
+C         scan), so a program reading the log need not decode the plot
+        WRITE (ISYSWR,1002)  IPAR,CPNAM(IPAR),NXYPT
+        DO 610 I= 1, NXYPT
+  610   WRITE (ISYSWR,1003)  CHPT(I),XPT(I),YPT(I)
         WRITE (ISYSWR,1001)  NEWPAG,IPAR,CPNAM(IPAR)
         NUNIT = ISYSWR
         CALL MNPLOT(XPT,YPT,CHPT,NXYPT,NUNIT,NPAGWD,NPAGLN)
@@ -123,4 +129,7 @@ C         finished with all parameters
       RETURN
  1000 FORMAT (46H REQUESTED RANGE OUTSIDE LIMITS FOR PARAMETER  ,I3/)
  1001 FORMAT (I1,'SCAN OF PARAMETER NO.',I3,3H,   ,A10)
+ 1002 FORMAT (' SCAN VALUES OF PARAMETER NO.',I3,3H,   ,A10,I5,
+     +        ' POINTS')
+ 1003 FORMAT (1X,A1,2(1X,1PE24.16))
       END
