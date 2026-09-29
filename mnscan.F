@@ -53,6 +53,11 @@ C         equivalent to a loop over parameters requested
       IF (IINT .LE. 0)  GO TO 100
 C         set up range for parameter IPAR
   200 CONTINUE
+C         the requested number of points again for every parameter: the
+C         unlimited-range branch (250) sets NCCALL from its own binning,
+C         and a parameter scanned after it used that count with a step
+C         made for NCALL points, stopping short of its upper limit
+      NCCALL = NCALL
       UBEST = U(IPAR)
       XPT(1) = UBEST
       YPT(1) = AMIN
